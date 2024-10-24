@@ -215,7 +215,7 @@
   filter: sepia(10%) hue-rotate(100deg) contrast(80%) brightness(150%);
 }
 
-.card__text-paragraph {
+.card__text-container {
   display: flex;
   flex-direction: column;
   gap: 27px;
