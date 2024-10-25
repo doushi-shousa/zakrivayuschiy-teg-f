@@ -70,9 +70,10 @@
   text-transform: uppercase;
   cursor: pointer;
   background: transparent;
-  border: 1px solid transparent;
+  border: none;
   transition: 0.3s ease;
   position: relative;
+  padding: 0;
 }
 
 .theme-menu__button:disabled {
@@ -83,23 +84,22 @@
 .theme-menu__button:disabled::before {
   content: '▶';
   position: absolute;
-  left: -16px;
+  left: -24px;
   color: var(--hover-active-color);
   animation: active-menu 0.5s ease-in-out infinite alternate;
 }
 
 .theme-menu__button::after {
-  content: '';
+  content: "";
   position: absolute;
-  bottom: -2px;
-  left: 0;
-  display: block;
+  bottom: -5px;
+  left: 0px;
   width: 100%;
   height: 2px;
-  background-color: var(--hover-active-color);
-  transform: scaleX(0);
-  transform-origin: 0 0;
+  background-color: var(--accent-color);
   transition: transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
 .theme-menu__button:hover {
@@ -181,10 +181,9 @@
 }
 
 .card__image {
-  object-fit: fill;
+  object-position: right;
+  object-fit: cover;
   display: flex;
-  width: 100%;
-  aspect-ratio: 1 / 1;
 }
 
 .dim {
@@ -254,11 +253,6 @@
   border: 2px solid var(--accent-color);
 }
 
-.like-icon {
-  position: relative;
-  top: 2px;
-}
-
 .sparks {
   opacity: 0;
 }
@@ -278,7 +272,7 @@
 
 .button-filling:focus {
   outline: none;
-  box-shadow: 2px 2px 0 0 var(--accent-color);
+  box-shadow: 2px 2px 0 0;
 }
 
 .button-filling:focus-visible {
@@ -361,8 +355,6 @@
 }
 
 .floppy__dialog {
-  width: 39px;
-  height: 39px;
   flex-shrink: 0;
   color: var(--accent-color);
 }
